@@ -8,4 +8,6 @@ RUN pip install --upgrade pip setuptools wheel
 
 RUN pip install -r requirements.txt
 
+COPY . .
+
 CMD ["python","dockerpract.py"]
