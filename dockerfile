@@ -2,7 +2,7 @@ FROM  python:3.11-slim
 
 WORKDIR /DockerPract
 
-COPY . .
+COPY requirements.txt .
 
 RUN pip install --upgrade pip setuptools wheel
 
