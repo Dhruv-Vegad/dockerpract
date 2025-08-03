@@ -2,9 +2,9 @@ FROM  python:3.11-slim
 
 WORKDIR /dockerpract/djangoapp
 
-COPY requirements.txt /dockerpract
+COPY requirements.txt .
 
-COPY djangoapp /dockerpract 
+COPY djangoapp .
 
 RUN pip install --upgrade pip setuptools wheel
 
