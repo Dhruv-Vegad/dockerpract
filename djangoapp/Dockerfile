@@ -11,4 +11,4 @@ RUN pip install --upgrade pip setuptools wheel
 RUN pip install -r requirements.txt
 
 ENTRYPOINT [ "python:3.11-slim" ]
-CMD [ "manage.py","runserver","0.0.70" ]
+CMD [ "manage.py","runserver","0.0.0.0.70" ]
