@@ -4,7 +4,7 @@ WORKDIR /dockerpract/djangoapp
 
 COPY requirements.txt /dockerpract
 
-COPY /djangoapp /dockerpract 
+COPY djangoapp /dockerpract 
 
 RUN pip install --upgrade pip setuptools wheel
 
