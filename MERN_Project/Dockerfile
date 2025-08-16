@@ -6,6 +6,8 @@ COPY package.json .
 
 RUN npm install
 
+RUN npm run server
+
 EXPOSE 5173
 
 ENTRYPOINT [ "npm", "run", "dev"]
