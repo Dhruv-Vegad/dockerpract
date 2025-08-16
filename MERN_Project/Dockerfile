@@ -10,4 +10,6 @@ COPY . .
 
 EXPOSE 5173
 
+ENTRYPOINT [ "npm","run", "server"]
+
 CMD [ "npm", "run", "dev","--","--host","0.0.0.0"]
