@@ -7,6 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
+        // target: 'http://mern_project-backend-1:3001',
         target: 'http://backend:3001',
         changeOrigin: true,
       },

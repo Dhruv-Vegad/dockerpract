@@ -1,13 +1,13 @@
-FROM node:24.6.0
+FROM node:24.6.0   
 
-WORKDIR /MERN_Project
+WORKDIR /MERN_Project 
 
-COPY package*.json ./
+COPY package*.json ./ 
 
-RUN npm install
+RUN npm install 
 
 COPY . .
-
+ 
 EXPOSE 3001
 
 CMD [ "npm", "run", "server"]
