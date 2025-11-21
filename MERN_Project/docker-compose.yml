@@ -1,4 +1,3 @@
-version:  "3.8"
 services:
   backend:
     build:
@@ -6,26 +5,20 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3001:3001"
-    # volumes:
-    #   - ./server:/MERN_Project/server
-    #   - /MERN_Project/server/node_modul
     networks:
-      - my-nu   
+      - my-network   
+
   frontend:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "5173:5173"
-    # volumes: 
-    #   - ./src:/MERN_Project/src
-    #   - /MERN_Project/node_modules
     networks:
-      - my-nu
-    # command:  npm run dev
+      - my-network
     depends_on:
       - backend
 
 networks:
-  my-nu:
-    external: true
+  my-network:
+    driver: bridge
